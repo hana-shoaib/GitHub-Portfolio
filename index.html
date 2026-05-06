@@ -3,380 +3,223 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Hana Shoaib - Computer Science Student Portfolio" />
-  <title>Hana Shoaib - Portfolio</title>
-
+  <meta name="description" content="Hana Shoaib - Computer Science student portfolio showcasing software development projects, skills, and experience." />
+  <title>Hana Shoaib | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <div class="page-glow"></div>
+  <div class="noise"></div>
 
-  <header class="header">
+  <header class="site-header">
     <nav class="nav container">
-      <a href="#home" class="logo">&lt; HanaShoaib /&gt;</a>
+      <a class="logo" href="#home" aria-label="Hana Shoaib home">HS</a>
 
-      <button class="menu-btn" aria-label="Open menu">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
         <span></span>
       </button>
 
-      <div class="nav-menu">
-        <a href="#home">Home</a>
+      <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
-        <a class="resume-btn" href="Hana_Shoaib_CV.pdf" target="_blank" rel="noopener">Resume</a>
       </div>
     </nav>
   </header>
 
   <main>
-    <section id="home" class="hero section container">
-      <div class="hero-content reveal">
-        <div class="terminal-label">portfolio.exe</div>
-        <div class="terminal-command">$ whoami</div>
-
-        <h1># Hello, I'm <span>Hana Shoaib</span> <span class="cursor">|</span></h1>
-
-        <h2>Computer Science Student</h2>
-
-        <p>
-          Computer Science student with hands-on experience in software development through academic
-          projects using Python, C++, Scala, and web technologies. Strong problem-solving and
-          collaboration skills demonstrated through team-based coursework and technical mentorship.
+    <section id="home" class="hero container section">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Computer Science Student</p>
+        <h1>Hi, I’m <span>Hana Shoaib</span>.</h1>
+        <p class="hero-text">
+          I build practical software projects using Python, C++, Scala, and web technologies.
+          I enjoy solving problems, designing clean user experiences, and learning through real-world teamwork.
         </p>
 
         <div class="hero-actions">
-          <a href="#projects" class="btn primary">View My Work</a>
-          <a href="#contact" class="btn outline">Get In Touch</a>
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn secondary" href="assets/Hana_Shoaib_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+        </div>
+
+        <div class="socials" aria-label="Social links">
+          <a href="https://github.com/hana-shoaib" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/hana-shoaib-245212289/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:hanashoaib2@gmail.com">Email</a>
         </div>
       </div>
 
-      <div class="hero-image reveal">
-        <div class="image-frame">
-          <div class="initials-avatar">HS</div>
+      <div class="hero-card reveal">
+        <div class="orb"></div>
+        <div class="profile-card">
+          <div class="avatar">HS</div>
+          <h2>Hana Shoaib</h2>
+          <p>New Cairo, Egypt</p>
+          <div class="card-tags">
+            <span>Python</span>
+            <span>C++</span>
+            <span>Web</span>
+            <span>Scala</span>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="about" class="section container reveal">
-      <div class="section-title">
-        <span>01.</span>
-        <h2>About Me</h2>
+      <div class="section-heading">
+        <p class="eyebrow">About</p>
+        <h2>Curious, collaborative, and always building.</h2>
+      </div>
+      <p class="wide-text">
+        I’m a Computer Science student at Egypt University of Informatics with hands-on experience
+        in software development through academic and team-based projects. My work includes data
+        structure simulations, web applications, GUI games, and rule-based chatbots.
+      </p>
+    </section>
+
+    <section id="experience" class="section container reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Experience & Education</p>
+        <h2>Academic growth with leadership experience.</h2>
       </div>
 
-      <div class="about-grid">
-        <div class="profile-panel card">
-          <h3>Profile</h3>
-
-          <div class="profile-row">
-            <span>Name</span>
-            <strong>Hana Shoaib</strong>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div>
+            <p class="date">Sept 2023 – Expected July 2027</p>
+            <h3>B.Sc. Computer Science</h3>
+            <p>Egypt University of Informatics — New Administrative Capital, Egypt</p>
           </div>
+        </article>
 
-          <div class="profile-row">
-            <span>Location</span>
-            <strong>New Cairo, Egypt</strong>
+        <article class="timeline-item">
+          <div>
+            <p class="date">Oct 2024 – March 2025</p>
+            <h3>Mentor / Co-Head</h3>
+            <p>WeDev Club — Egypt University of Informatics</p>
+            <p>Provided guidance and support to mentees, helping them develop their skills and reach their goals.</p>
           </div>
-
-          <div class="profile-row">
-            <span>Education</span>
-            <strong>Computer Science</strong>
-          </div>
-
-          <div class="profile-row">
-            <span>University</span>
-            <strong>Egypt University of Informatics</strong>
-          </div>
-
-          <div class="profile-row">
-            <span>Recent Role</span>
-            <strong>Mentor / Co-Head @ WeDev Club</strong>
-          </div>
-        </div>
-
-        <div class="about-text">
-          <div class="tag-block card">
-            <h3>Specializations</h3>
-            <div class="tags">
-              <span>Software Development</span>
-              <span>Web Applications</span>
-              <span>Data Structures</span>
-              <span>Functional Programming</span>
-            </div>
-          </div>
-
-          <div class="tag-block card">
-            <h3>Currently Working With</h3>
-            <div class="tags">
-              <span>Python</span>
-              <span>C++</span>
-              <span>Scala</span>
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>Git</span>
-            </div>
-          </div>
-
-          <p>
-            I'm passionate about learning how software systems are built and applying what I learn
-            through practical projects. My work includes interactive web applications, GUI-based games,
-            rule-based chatbots, and C++ systems focused on object-oriented programming and data structures.
-          </p>
-
-          <p>
-            Beyond technical skills, I value teamwork, clear communication, mentorship, and continuous
-            learning. I’m seeking opportunities to grow my technical and professional skills in real-world settings.
-          </p>
-        </div>
-      </div>
-
-      <div class="skills-section">
-        <h3>Technical Skills</h3>
-
-        <div class="skills-grid">
-          <div class="skill-card card">
-            <h4>Programming Languages</h4>
-            <div class="tags">
-              <span>Python</span>
-              <span>C++</span>
-              <span>Scala</span>
-              <span>JavaScript</span>
-              <span>HTML</span>
-              <span>CSS</span>
-            </div>
-          </div>
-
-          <div class="skill-card card">
-            <h4>Tools & Technologies</h4>
-            <div class="tags">
-              <span>Git</span>
-              <span>GitHub</span>
-              <span>VS Code</span>
-              <span>IntelliJ</span>
-            </div>
-          </div>
-
-          <div class="skill-card card">
-            <h4>Core Concepts</h4>
-            <div class="tags">
-              <span>OOP</span>
-              <span>Data Structures</span>
-              <span>Functional Programming</span>
-              <span>Web Design</span>
-            </div>
-          </div>
-        </div>
+        </article>
       </div>
     </section>
 
     <section id="projects" class="section container reveal">
-      <div class="section-title">
-        <span>02.</span>
-        <h2>Featured Projects</h2>
+      <div class="section-heading">
+        <p class="eyebrow">Projects</p>
+        <h2>Selected work</h2>
       </div>
 
-      <div class="projects-list">
-        <article class="featured-project card">
-          <div class="project-preview">
-            <div class="mock-window">
-              <div class="mock-dots"><span></span><span></span><span></span></div>
-              <div class="mock-content">College Map<br/>Web Application</div>
-            </div>
-          </div>
-
-          <div class="project-info">
-            <span class="featured-label">Featured Project</span>
-            <h3>College Map Web Application</h3>
-            <p>
-              Developed a college navigation web app with frontend and backend integration using JSON-based data.
-              Implemented location mapping and QR-based access while collaborating through Git and GitHub.
-            </p>
-
-            <div class="project-tags">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>JSON</span>
-              <span>GitHub</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="featured-project card reverse">
-          <div class="project-preview">
-            <div class="mock-window">
-              <div class="mock-dots"><span></span><span></span><span></span></div>
-              <div class="mock-content">Career Path<br/>Explorer Chatbot</div>
-            </div>
-          </div>
-
-          <div class="project-info">
-            <span class="featured-label">Featured Project</span>
-            <h3>Career Path Explorer Chatbot</h3>
-            <p>
-              Built a functional chatbot for career suggestions using Scala with a rule-based logic system.
-              Applied functional programming concepts and pattern matching to create structured career guidance.
-            </p>
-
-            <div class="project-tags">
-              <span>Scala</span>
-              <span>Functional Programming</span>
-              <span>Pattern Matching</span>
-              <span>Logic</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="featured-project card">
-          <div class="project-preview">
-            <div class="mock-window">
-              <div class="mock-dots"><span></span><span></span><span></span></div>
-              <div class="mock-content">Spotify<br/>Simulation</div>
-            </div>
-          </div>
-
-          <div class="project-info">
-            <span class="featured-label">Featured Project</span>
-            <h3>Spotify Data Structure Simulation</h3>
-            <p>
-              Developed a simplified version of Spotify to manage playlists and songs using custom linked lists
-              and other data structures. Implemented queue, stack, and sorting algorithms.
-            </p>
-
-            <div class="project-tags">
-              <span>C++</span>
-              <span>Linked Lists</span>
-              <span>Queues</span>
-              <span>Stacks</span>
-              <span>Sorting</span>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <div class="more-projects">
-        <article class="mini-card card">
-          <h3>Snake and Ladder Game with GUI</h3>
-          <p>Collaborated in a team to design and develop a GUI-based board game using Python and Tkinter.</p>
-          <div class="project-tags">
-            <span>Python</span>
-            <span>Tkinter</span>
-            <span>GUI</span>
-          </div>
-        </article>
-
-        <article class="mini-card card">
-          <h3>Student Management System</h3>
-          <p>Created a basic system to manage student records using object-oriented principles such as classes and inheritance.</p>
-          <div class="project-tags">
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-icon">♪</span>
             <span>C++</span>
-            <span>OOP</span>
           </div>
+          <h3>Spotify Data Structure Simulation</h3>
+          <p>Built a simplified Spotify-style system to manage playlists and songs using linked lists, queues, stacks, and sorting algorithms.</p>
+          <div class="tech-list"><span>Data Structures</span><span>Algorithms</span><span>C++</span></div>
         </article>
 
-        <article class="mini-card card">
-          <h3>To-Do List Web App</h3>
-          <p>Built a fully functional to-do list as part of a university-offered course while learning responsive design.</p>
-          <div class="project-tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-icon">⌖</span>
+            <span>Web</span>
           </div>
+          <h3>College Map Web Application</h3>
+          <p>Developed a college navigation web app with frontend/backend integration using JSON-based data, location mapping, and QR-based access.</p>
+          <div class="tech-list"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-icon">💬</span>
+            <span>Scala</span>
+          </div>
+          <h3>Career Path Explorer Chatbot</h3>
+          <p>Created a rule-based chatbot that suggests career paths using Scala, functional programming, and pattern matching concepts.</p>
+          <div class="tech-list"><span>Scala</span><span>Functional Programming</span><span>Logic</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-icon">🎲</span>
+            <span>Python</span>
+          </div>
+          <h3>Snake and Ladder Game with GUI</h3>
+          <p>Collaborated with a team to build a GUI-based board game while practicing modular code, event handling, and interface design.</p>
+          <div class="tech-list"><span>Python</span><span>Tkinter</span><span>GUI</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-icon">▣</span>
+            <span>C++</span>
+          </div>
+          <h3>Student Management System</h3>
+          <p>Designed a basic student record management system using object-oriented programming concepts such as classes and inheritance.</p>
+          <div class="tech-list"><span>C++</span><span>OOP</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-icon">✓</span>
+            <span>Web</span>
+          </div>
+          <h3>To-Do List Web App</h3>
+          <p>Built a responsive to-do list application while learning client-side interactivity and web development fundamentals.</p>
+          <div class="tech-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
         </article>
       </div>
     </section>
 
-    <section id="experience" class="section container reveal">
-      <div class="section-title">
-        <span>03.</span>
-        <h2>Experience</h2>
+    <section id="skills" class="section container reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Skills</p>
+        <h2>Technical toolkit</h2>
       </div>
 
-      <div class="tabs card">
-        <button class="tab-btn active" data-tab="work">Work Experience</button>
-        <button class="tab-btn" data-tab="education">Education</button>
-        <button class="tab-btn" data-tab="certifications">Certifications</button>
-      </div>
-
-      <div class="tab-content active" id="work">
-        <article class="experience-card card">
-          <h3>Mentor / Co-Head @ WeDev Club</h3>
-          <p class="date">Oct 2024 - March 2025 | Egypt University of Informatics</p>
-          <ul>
-            <li>Provided guidance and support to mentees, helping them develop their skills and reach their goals.</li>
-            <li>Demonstrated collaboration, communication, and leadership through technical mentorship.</li>
-          </ul>
-        </article>
-      </div>
-
-      <div class="tab-content" id="education">
-        <article class="experience-card card">
-          <h3>Bachelor of Science in Computer Science @ Egypt University of Informatics</h3>
-          <p class="date">Sept 2023 - Expected July 2027 | New Administrative Capital, Egypt</p>
-          <ul>
-            <li>Studying computer science with a focus on programming, software development, data structures, and web design.</li>
-            <li>Completed academic projects using Python, C++, Scala, HTML, CSS, and JavaScript.</li>
-          </ul>
-        </article>
-      </div>
-
-      <div class="tab-content" id="certifications">
-        <article class="experience-card card">
+      <div class="skills-grid">
+        <div class="skill-box">
+          <h3>Languages</h3>
+          <p>Python, C++, Scala, JavaScript, HTML, CSS</p>
+        </div>
+        <div class="skill-box">
+          <h3>Tools</h3>
+          <p>Git, GitHub, VS Code, IntelliJ</p>
+        </div>
+        <div class="skill-box">
+          <h3>Concepts</h3>
+          <p>Object-Oriented Programming, Data Structures, Functional Programming, Web Design</p>
+        </div>
+        <div class="skill-box">
           <h3>Certifications</h3>
-          <ul>
-            <li>Introduction to Web Development</li>
-            <li>Programming Fundamentals Diploma</li>
-          </ul>
-        </article>
+          <p>Introduction to Web Development, Programming Fundamentals Diploma</p>
+        </div>
       </div>
     </section>
 
     <section id="contact" class="section container reveal">
-      <div class="section-title">
-        <span>04.</span>
-        <h2>Get In Touch</h2>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-copy">
-          <p>
-            I’m seeking internships, entry-level learning opportunities, and collaborative projects
-            where I can continue growing as a computer science student and software developer.
-          </p>
-
-          <div class="contact-details">
-            <a href="mailto:hanashoaib2@gmail.com">hanashoaib2@gmail.com</a>
-            <a href="tel:+201012660842">+20 101 266 0842</a>
-            <span>New Cairo, Egypt</span>
-          </div>
-        </div>
-
-        <div class="connect-card card">
-          <h3>Let's Connect!</h3>
-          <p>Ready to discuss opportunities, collaborations, or just want to say hello?</p>
-
-          <a href="mailto:hanashoaib2@gmail.com" class="btn primary full">Send Me an Email</a>
-
-          <div class="social-links">
-            <a href="https://github.com/hana-shoaib" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://www.linkedin.com/in/hana-shoaib-245212289/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="Hana_Shoaib_CV.pdf" target="_blank" rel="noopener">Resume</a>
-          </div>
+      <div class="contact-card">
+        <p class="eyebrow">Contact</p>
+        <h2>Let’s connect.</h2>
+        <p>
+          I’m open to internships, learning opportunities, and collaborative software projects.
+        </p>
+        <div class="contact-actions">
+          <a class="btn primary" href="mailto:hanashoaib2@gmail.com">Email Me</a>
+          <a class="btn secondary" href="https://github.com/hana-shoaib" target="_blank" rel="noopener">GitHub Profile</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <p>© <span id="year"></span> Hana Shoaib</p>
+  <footer class="footer container">
+    <p>© <span id="year"></span> Hana Shoaib. Built with HTML, CSS, and JavaScript.</p>
   </footer>
 
   <script src="script.js"></script>

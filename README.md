@@ -1,18 +1,27 @@
 # Hana Shoaib Portfolio
 
-A close reference-style portfolio website using Hana Shoaib's content.
+A clean, dark, animated personal portfolio built with HTML, CSS, and JavaScript.
 
-## Files
+## Live Website Setup with GitHub Pages
 
-- `index.html`
-- `style.css`
-- `script.js`
-- `Hana_Shoaib_CV.pdf`
+1. Create a new GitHub repository named `Portfolio`.
+2. Upload all files from this folder to the repository.
+3. Go to repository **Settings**.
+4. Open **Pages** from the left menu.
+5. Under **Build and deployment**, choose:
+   - Source: `Deploy from a branch`
+   - Branch: `main`
+   - Folder: `/root`
+6. Save.
+7. Your website should become available at:
 
-## GitHub Pages URL
+```text
+https://hana-shoaib.github.io/Portfolio/
+```
 
-https://hana-shoaib.github.io/GitHub-Portfolio/
+## Edit Later
 
-## How to update
-
-Upload these files to the root of your GitHub repository and commit the changes.
+- Main content: `index.html`
+- Styling/design: `style.css`
+- Animations/menu behavior: `script.js`
+- CV file: `assets/Hana_Shoaib_CV.pdf`
