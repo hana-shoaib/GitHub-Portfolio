@@ -1,46 +1,48 @@
 const year = document.querySelector("#year");
-if (year) year.textContent = new Date().getFullYear();
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
 
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+const menuBtn = document.querySelector(".menu-btn");
+const navMenu = document.querySelector(".nav-menu");
 
-if (menuToggle && navLinks) {
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
+if (menuBtn && navMenu) {
+  menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
   });
 
-  navLinks.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => navLinks.classList.remove("open"));
+  navMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => navMenu.classList.remove("open"));
   });
 }
 
-const revealItems = document.querySelectorAll(".reveal");
+const revealElements = document.querySelectorAll(".reveal");
 
-const revealObserver = new IntersectionObserver(
+const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
-        revealObserver.unobserve(entry.target);
+        observer.unobserve(entry.target);
       }
     });
   },
-  { threshold: 0.12 }
+  { threshold: 0.13 }
 );
 
-revealItems.forEach((item) => revealObserver.observe(item));
+revealElements.forEach((element) => observer.observe(element));
 
-const tabs = document.querySelectorAll(".tab");
-const panels = document.querySelectorAll(".tab-panel");
+const tabButtons = document.querySelectorAll(".tab-btn");
+const tabContents = document.querySelectorAll(".tab-content");
 
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    const target = tab.dataset.tab;
+tabButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const tabId = button.dataset.tab;
 
-    tabs.forEach((item) => item.classList.remove("active"));
-    panels.forEach((panel) => panel.classList.remove("active"));
+    tabButtons.forEach((btn) => btn.classList.remove("active"));
+    tabContents.forEach((content) => content.classList.remove("active"));
 
-    tab.classList.add("active");
-    document.querySelector(`#${target}`).classList.add("active");
+    button.classList.add("active");
+    document.querySelector(`#${tabId}`).classList.add("active");
   });
 });
