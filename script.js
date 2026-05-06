@@ -1,30 +1,48 @@
-const yearEl = document.getElementById("year");
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+const year = document.querySelector("#year");
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
 
-const toggle = document.querySelector(".nav-toggle");
-const navLinks = document.querySelector(".nav-links");
+const menuBtn = document.querySelector(".menu-btn");
+const navMenu = document.querySelector(".nav-menu");
 
-if (toggle && navLinks) {
-  toggle.addEventListener("click", () => {
-    const open = navLinks.classList.toggle("open");
-    toggle.setAttribute("aria-expanded", String(open));
+if (menuBtn && navMenu) {
+  menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
   });
-  navLinks.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("open");
-      toggle.setAttribute("aria-expanded", "false");
-    });
+
+  navMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => navMenu.classList.remove("open"));
   });
 }
 
-const revealEls = document.querySelectorAll(".reveal");
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
+const revealElements = document.querySelectorAll(".reveal");
 
-revealEls.forEach(el => observer.observe(el));
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.13 }
+);
+
+revealElements.forEach((element) => observer.observe(element));
+
+const tabButtons = document.querySelectorAll(".tab-btn");
+const tabContents = document.querySelectorAll(".tab-content");
+
+tabButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const tabId = button.dataset.tab;
+
+    tabButtons.forEach((btn) => btn.classList.remove("active"));
+    tabContents.forEach((content) => content.classList.remove("active"));
+
+    button.classList.add("active");
+    document.querySelector(`#${tabId}`).classList.add("active");
+  });
+});
